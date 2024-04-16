@@ -2,7 +2,6 @@
 from os import path
 from threading import Lock
 
-from waitress import serve
 from flask import Flask, Response, request
 
 app = Flask(__name__)
@@ -43,4 +42,4 @@ def send(name):
 
 
 if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=9090)
+    app.run(host='0.0.0.0', port=9090)
